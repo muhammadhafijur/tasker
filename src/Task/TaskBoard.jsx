@@ -32,7 +32,7 @@ export default function TaskBoard() {
         }),
       );
     }
-    setShowAddModal(false);
+    handleCloseClick()
   }
 
   function handleEditTask(task) {
@@ -50,11 +50,6 @@ export default function TaskBoard() {
     setTasks([...tasks]);
   }
 
-  function handleCloseClick() {
-    setShowAddModal(false);
-    setTaskToUpdate(null);
-  }
-
   function handleFavorite(taskId) {
     setTasks(
       tasks.map((task) => {
@@ -70,10 +65,16 @@ export default function TaskBoard() {
   function handleSearch(searchTerm){
     console.log(searchTerm);
 
-    const filterd = tasks.filter((task) => task.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    const filtered = tasks.filter((task) => task.title.toLowerCase().includes(searchTerm.toLowerCase()))
 
-    setTasks([...filterd])
+    setTasks([...filtered])
   }
+
+  function handleCloseClick() {
+    setShowAddModal(false);
+    setTaskToUpdate(null);
+  }
+
 
   return (
     <section className="mb-20" id="tasks">
