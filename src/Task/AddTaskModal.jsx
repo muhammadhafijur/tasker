@@ -29,7 +29,7 @@ export default function AddTaskModal({ onSave, taskToUpdate, onCloseClick }) {
   return (
     <>
       <div className="absolute left-0 top-0 z-10 h-full w-full bg-black bg-opacity-70"></div>
-      <form className="absolute left-1/2 top-1/4 z-10 mx-auto my-10 w-full max-w-[740px] -translate-x-1/2 rounded-xl border border-[#FEFBFB]/[36%] bg-[#191D26] p-9 max-md:px-4 lg:my-20 lg:p-11">
+      <form className="absolute left-1/2 top-1/2 z-10 mx-auto my-10 w-full max-w-[740px] -translate-x-1/2 -translate-y-1/2 rounded-xl border border-[#FEFBFB]/[36%] bg-[#191D26] p-9 max-md:px-4 lg:my-20 lg:p-11">
         <h2 className="mb-9 text-center text-2xl font-bold text-white lg:mb-11 lg:text-[28px]">
           {isAdd ? "Add New Task" : "Edit Task"}
         </h2>
