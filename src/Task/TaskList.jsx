@@ -39,7 +39,7 @@ export default function TaskList({ tasks }) {
                 {task.isFavorite ? (
                   <FaStar color="yellow" />
                 ) : (
-                  <FaStar color="green" />
+                  <FaStar color="gray" />
                 )}
               </td>
               <td>{task.title}</td>
